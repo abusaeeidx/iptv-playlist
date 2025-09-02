@@ -14,15 +14,16 @@ jobs:
 
       - name: Clone secret repo
         run: |
-          # Secret-based folder name
           FOLDER=$(echo "${{ secrets.XY }}" | md5sum | cut -d' ' -f1)
+          echo "FOLDER=$FOLDER" >> $GITHUB_ENV
           git clone --depth=1 "${{ secrets.XY }}" "$FOLDER"
 
       - name: Copy M3U files
         run: |
           TARGET=$(echo "${{ secrets.XY }}" | sha1sum | cut -d' ' -f1)
+          echo "TARGET=$TARGET" >> $GITHUB_ENV
           mkdir -p "$TARGET"
-          rsync -a --include='*/' --include='*.m3u' --exclude='*' "$FOLDER"/streams/ "$TARGET"/
+          rsync -a --include='*/' --include='*.m3u' --exclude='*' "$FOLDER/streams/" "$TARGET/" || true
 
       - name: Count files
         run: echo "Count: $(find "$TARGET" -type f -name '*.m3u' | wc -l)"
