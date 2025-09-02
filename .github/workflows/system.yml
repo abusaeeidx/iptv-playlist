@@ -1,0 +1,36 @@
+name: ZT
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */6 * * *'
+
+jobs:
+  S1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Clone secret repo
+        run: |
+          # Secret-based folder name
+          FOLDER=$(echo "${{ secrets.XY }}" | md5sum | cut -d' ' -f1)
+          git clone --depth=1 "${{ secrets.XY }}" "$FOLDER"
+
+      - name: Copy M3U files
+        run: |
+          TARGET=$(echo "${{ secrets.XY }}" | sha1sum | cut -d' ' -f1)
+          mkdir -p "$TARGET"
+          rsync -a --include='*/' --include='*.m3u' --exclude='*' "$FOLDER"/streams/ "$TARGET"/
+
+      - name: Count files
+        run: echo "Count: $(find "$TARGET" -type f -name '*.m3u' | wc -l)"
+
+      - name: Commit & push
+        run: |
+          git config user.name "AB"
+          git config user.email "ab@x.com"
+          git add "$TARGET"
+          git diff --cached --quiet || git commit -m "U"
+          git push
