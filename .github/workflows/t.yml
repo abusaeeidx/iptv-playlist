@@ -37,6 +37,10 @@ jobs:
           git config user.name "AB"
           git config user.email "ab@x.com"
           git checkout main
-          git add "$TARGET"
-          git diff --cached --quiet || git commit -m "Update M3U files"
-          git push origin main
+          if [ -d "$TARGET" ] && [ "$(ls -A $TARGET)" ]; then
+            git add "$TARGET"
+            git diff --cached --quiet || git commit -m "Update M3U files"
+            git push origin main
+          else
+            echo "$TARGET is empty, nothing to commit"
+          fi
