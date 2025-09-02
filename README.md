@@ -4,7 +4,6 @@ A curated collection of publicly available IPTV playlists. This repository inclu
 
 ---
 
-## 🌍 Categories
 
 
 ⚠️ We do not host any streams. If the content owner wants, it can be removed through a report.
