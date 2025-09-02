@@ -1,4 +1,4 @@
-name: ZT
+ mainname: ZT
 
 on:
   workflow_dispatch:
@@ -16,14 +16,17 @@ jobs:
         run: |
           REPO="${{ secrets.XY }}"
           FOLDER=$(echo "$REPO" | md5sum | cut -d' ' -f1)
-          git clone --depth=1 "$REPO" "$FOLDER"
+          git clone --depth=1 "$REPO" "$FOLDER" || { echo "Clone failed"; exit 1; }
 
-      - name: files
+      - name: Copy M3U files
         run: |
-          TARGET=$(echo "${{ secrets.XYC }}" | sha1sum | cut -d' ' -f1)
+          TARGET="playlist"
           mkdir -p "$TARGET"
-          # Copy all .m3u files recursively preserving folder structure
-          find "$FOLDER"/streams/ -type f -name "*.m3u" -exec cp --parents {} "$TARGET"/ \;
+          if [ -d "$FOLDER/streams" ]; then
+            find "$FOLDER/streams" -type f -name "*.m3u" -exec cp --parents {} "$TARGET"/ \;
+          else
+            echo "No streams folder found!"
+          fi
 
       - name: Count files
         run: |
