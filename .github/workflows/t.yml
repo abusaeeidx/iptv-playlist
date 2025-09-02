@@ -1,4 +1,4 @@
- mainname: ZT
+name: ZT
 
 on:
   workflow_dispatch:
