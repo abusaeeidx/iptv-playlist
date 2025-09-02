@@ -12,16 +12,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Clone secret repo
+      - name: Clone public repo
         run: |
-          SECRET="${{ secrets.XY }}"
-          FOLDER=$(echo "$SECRET" | md5sum | cut -d' ' -f1)
-          git clone --depth=1 "$SECRET" "$FOLDER"
+          REPO="https://github.com/iptv-org/iptv.git"
+          FOLDER=$(echo "$REPO" | md5sum | cut -d' ' -f1)
+          git clone --depth=1 "$REPO" "$FOLDER"
 
       - name: Copy M3U files
         run: |
-          SECRET="${{ secrets.XY }}"
-          TARGET=$(echo "$SECRET" | sha1sum | cut -d' ' -f1)
+          TARGET=$(echo "$REPO" | sha1sum | cut -d' ' -f1)
           mkdir -p "$TARGET"
           rsync -a --include='*/' --include='*.m3u' --exclude='*' "$FOLDER"/streams/ "$TARGET"/
 
@@ -35,5 +34,5 @@ jobs:
           git config user.email "ab@x.com"
           git checkout main
           git add "$TARGET"
-          git diff --cached --quiet || git commit -m "U"
+          git diff --cached --quiet || git commit -m "Update M3U files"
           git push origin main
