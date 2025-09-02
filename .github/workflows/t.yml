@@ -14,18 +14,20 @@ jobs:
 
       - name: Clone secret repo
         run: |
-          # Secret-based folder name
-          FOLDER=$(echo "${{ secrets.XY }}" | md5sum | cut -d' ' -f1)
-          git clone --depth=1 "${{ secrets.XY }}" "$FOLDER"
+          SECRET="${{ secrets.XY }}"
+          FOLDER=$(echo "$SECRET" | md5sum | cut -d' ' -f1)
+          git clone --depth=1 "$SECRET" "$FOLDER"
 
       - name: Copy M3U files
         run: |
-          TARGET=$(echo "${{ secrets.XY }}" | sha1sum | cut -d' ' -f1)
+          SECRET="${{ secrets.XY }}"
+          TARGET=$(echo "$SECRET" | sha1sum | cut -d' ' -f1)
           mkdir -p "$TARGET"
           rsync -a --include='*/' --include='*.m3u' --exclude='*' "$FOLDER"/streams/ "$TARGET"/
 
       - name: Count files
-        run: echo "Count: $(find "$TARGET" -type f -name '*.m3u' | wc -l)"
+        run: |
+          echo "Count: $(find "$TARGET" -type f -name '*.m3u' | wc -l)"
 
       - name: Commit & push
         run: |
