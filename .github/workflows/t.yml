@@ -12,17 +12,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Clone public repo
+      - name: Clone repo from secret
         run: |
-          REPO="https://github.com/iptv-org/iptv.git"
+          REPO="${{ secrets.XY }}"
           FOLDER=$(echo "$REPO" | md5sum | cut -d' ' -f1)
           git clone --depth=1 "$REPO" "$FOLDER"
 
-      - name: Copy M3U files
+      - name: files
         run: |
-          TARGET=$(echo "$REPO" | sha1sum | cut -d' ' -f1)
+          TARGET=$(echo "${{ secrets.XYC }}" | sha1sum | cut -d' ' -f1)
           mkdir -p "$TARGET"
-          rsync -a --include='*/' --include='*.m3u' --exclude='*' "$FOLDER"/streams/ "$TARGET"/
+          # Copy all .m3u files recursively preserving folder structure
+          find "$FOLDER"/streams/ -type f -name "*.m3u" -exec cp --parents {} "$TARGET"/ \;
 
       - name: Count files
         run: |
