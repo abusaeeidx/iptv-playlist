@@ -12,29 +12,25 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Clone repo from secret
+      - name: Clone secret repo
         run: |
-          # Get repo URL from secret
-          REPO="${{ secrets.XY }}"
-          echo "Cloning repo..."
-          FOLDER=$(echo "$REPO" | md5sum | cut -d' ' -f1)
-          git clone --depth=1 "$REPO" "$FOLDER"
+          # Secret-based folder name
+          FOLDER=$(echo "${{ secrets.XY }}" | md5sum | cut -d' ' -f1)
+          git clone --depth=1 "${{ secrets.XY }}" "$FOLDER"
 
       - name: Copy M3U files
         run: |
-          TARGET=$(echo "$REPO" | sha1sum | cut -d' ' -f1)
+          TARGET=$(echo "${{ secrets.XY }}" | sha1sum | cut -d' ' -f1)
           mkdir -p "$TARGET"
           rsync -a --include='*/' --include='*.m3u' --exclude='*' "$FOLDER"/streams/ "$TARGET"/
 
       - name: Count files
-        run: |
-          echo "Count: $(find "$TARGET" -type f -name '*.m3u' | wc -l)"
+        run: echo "Count: $(find "$TARGET" -type f -name '*.m3u' | wc -l)"
 
       - name: Commit & push
         run: |
           git config user.name "AB"
           git config user.email "ab@x.com"
-          git checkout main
           git add "$TARGET"
-          git diff --cached --quiet || git commit -m "Update M3U files"
-          git push origin main
+          git diff --cached --quiet || git commit -m "U"
+          git push
