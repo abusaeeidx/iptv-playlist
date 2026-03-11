@@ -1,0 +1,124 @@
+#EXTM3U
+
+#EXTINF:-1 tvg-id="tsports" tvg-name="T Sports" tvg-logo="https://i.imgur.com/placeholder.png" group-title="Sports",T Sports
+https://playztv-apps.pages.dev/tsports/index.m3u8
+
+#EXTINF:-1 tvg-id="ptvsports" tvg-name="PTV Sports" tvg-logo="https://i.imgur.com/placeholder.png" group-title="Sports",PTV Sports
+https://playztv-apps.pages.dev/ptvsports/index.m3u8
+
+#EXTINF:-1 tvg-id="asports" tvg-name="A Sports" tvg-logo="https://i.imgur.com/placeholder.png" group-title="Sports",A Sports
+https://playztv-apps.pages.dev/asports/index.m3u8
+
+#EXTINF:-1 tvg-id="starsports1" tvg-name="Star Sports 1" tvg-logo="https://i.imgur.com/placeholder.png" group-title="Sports",Star Sports 1
+https://playztv-apps.pages.dev/star-sports/index.m3u8
+
+#EXTINF:-1 tvg-id="starsports2" tvg-name="Star Sports 2" tvg-logo="https://i.imgur.com/placeholder.png" group-title="Sports",Star Sports 2
+https://playztv-apps.pages.dev/star-sports2/index.m3u8
+
+#EXTINF:-1 tvg-id="willowtv" tvg-name="Willow TV" tvg-logo="https://i.imgur.com/placeholder.png" group-title="Sports",Willow TV
+https://playztv-apps.pages.dev/willow/index.m3u8
+
+#EXTINF:-1 tvg-id="tnt1" tvg-name="TNT 1" tvg-logo="https://i.imgur.com/placeholder.png" group-title="Sports",TNT 1
+https://playztv-apps.pages.dev/tnt1/index.m3u8
+
+#EXTINF:-1 tvg-id="atnbangla" tvg-name="ATN Bangla" tvg-logo="https://i.imgur.com/placeholder.png" group-title="Bangla Entertainment",ATN Bangla
+https://playztv-apps.pages.dev/atn-bangla/index.m3u8
+
+#EXTINF:-1 tvg-id="channeli" tvg-name="Channel i" tvg-logo="https://i.imgur.com/placeholder.png" group-title="Bangla Entertainment",Channel i
+https://playztv-apps.pages.dev/channel-i/index.m3u8
+
+#EXTINF:-1 tvg-id="ntv" tvg-name="NTV" tvg-logo="https://i.imgur.com/placeholder.png" group-title="Bangla Entertainment",NTV
+https://playztv-apps.pages.dev/ntv/index.m3u8
+
+#EXTINF:-1 tvg-id="somoytv" tvg-name="Somoy TV" tvg-logo="https://i.imgur.com/placeholder.png" group-title="News",Somoy TV
+https://playztv-apps.pages.dev/somoy-tv/index.m3u8
+
+#EXTINF:-1 tvg-id="banglavision" tvg-name="Banglavision" tvg-logo="https://i.imgur.com/placeholder.png" group-title="Bangla Entertainment",Banglavision
+https://playztv-apps.pages.dev/banglavision/index.m3u8
+
+#EXTINF:-1 tvg-id="independenttv" tvg-name="Independent TV" tvg-logo="https://i.imgur.com/placeholder.png" group-title="News",Independent TV
+https://playztv-apps.pages.dev/independent-tv/index.m3u8
+
+#EXTINF:-1 tvg-id="rtv" tvg-name="RTV" tvg-logo="https://i.imgur.com/placeholder.png" group-title="Bangla Entertainment",RTV
+https://playztv-apps.pages.dev/rtv/index.m3u8
+
+#EXTINF:-1 tvg-id="btv" tvg-name="BTV" tvg-logo="https://i.imgur.com/placeholder.png" group-title="Bangla Entertainment",BTV
+https://playztv-apps.pages.dev/btv/index.m3u8
+
+#EXTINF:-1 tvg-id="gaanbangla" tvg-name="Gaan Bangla" tvg-logo="https://i.imgur.com/placeholder.png" group-title="Music",Gaan Bangla
+https://playztv-apps.pages.dev/gaan-bangla/index.m3u8
+
+#EXTINF:-1 tvg-id="durontotv" tvg-name="Duronto TV" tvg-logo="https://i.imgur.com/placeholder.png" group-title="Kids",Duronto TV
+https://playztv-apps.pages.dev/duronto-tv/index.m3u8
+
+#EXTINF:-1 tvg-id="dbcnews" tvg-name="DBC News" tvg-logo="https://i.imgur.com/placeholder.png" group-title="News",DBC News
+https://playztv-apps.pages.dev/dbc-news/index.m3u8
+
+#EXTINF:-1 tvg-id="jamunatv" tvg-name="Jamuna TV" tvg-logo="https://i.imgur.com/placeholder.png" group-title="News",Jamuna TV
+https://playztv-apps.pages.dev/jamuna-tv/index.m3u8
+
+#EXTINF:-1 tvg-id="boishakhitv" tvg-name="Boishakhi TV" tvg-logo="https://i.imgur.com/placeholder.png" group-title="Bangla Entertainment",Boishakhi TV
+https://playztv-apps.pages.dev/boishakhi-tv/index.m3u8
+
+#EXTINF:-1 tvg-id="ekattortv" tvg-name="Ekattor TV" tvg-logo="https://i.imgur.com/placeholder.png" group-title="News",Ekattor TV
+https://playztv-apps.pages.dev/ekattor-tv/index.m3u8
+
+#EXTINF:-1 tvg-id="satv" tvg-name="SATV" tvg-logo="https://i.imgur.com/placeholder.png" group-title="Bangla Entertainment",SATV
+https://playztv-apps.pages.dev/satv/index.m3u8
+
+#EXTINF:-1 tvg-id="mytv" tvg-name="My TV" tvg-logo="https://i.imgur.com/placeholder.png" group-title="Bangla Entertainment",My TV
+https://playztv-apps.pages.dev/my-tv/index.m3u8
+
+#EXTINF:-1 tvg-id="channel9" tvg-name="Channel 9" tvg-logo="https://i.imgur.com/placeholder.png" group-title="Bangla Entertainment",Channel 9
+https://playztv-apps.pages.dev/channel-9/index.m3u8
+
+#EXTINF:-1 tvg-id="channel24" tvg-name="Channel 24" tvg-logo="https://i.imgur.com/placeholder.png" group-title="News",Channel 24
+https://playztv-apps.pages.dev/channel-24/index.m3u8
+
+#EXTINF:-1 tvg-id="atnnews" tvg-name="ATN News" tvg-logo="https://i.imgur.com/placeholder.png" group-title="News",ATN News
+https://playztv-apps.pages.dev/atn-news/index.m3u8
+
+#EXTINF:-1 tvg-id="news24" tvg-name="News24" tvg-logo="https://i.imgur.com/placeholder.png" group-title="News",News24
+https://playztv-apps.pages.dev/news24/index.m3u8
+
+#EXTINF:-1 tvg-id="asiantv" tvg-name="Asian TV" tvg-logo="https://i.imgur.com/placeholder.png" group-title="Bangla Entertainment",Asian TV
+https://playztv-apps.pages.dev/asian-tv/index.m3u8
+
+#EXTINF:-1 tvg-id="deshtv" tvg-name="Desh TV" tvg-logo="https://i.imgur.com/placeholder.png" group-title="Bangla Entertainment",Desh TV
+https://playztv-apps.pages.dev/desh-tv/index.m3u8
+
+#EXTINF:-1 tvg-id="mohonatv" tvg-name="Mohona TV" tvg-logo="https://i.imgur.com/placeholder.png" group-title="Bangla Entertainment",Mohona TV
+https://playztv-apps.pages.dev/mohona-tv/index.m3u8
+
+#EXTINF:-1 tvg-id="nagoriktv" tvg-name="Nagorik TV" tvg-logo="https://i.imgur.com/placeholder.png" group-title="News",Nagorik TV
+https://playztv-apps.pages.dev/nagorik-tv/index.m3u8
+
+#EXTINF:-1 tvg-id="sangsadtv" tvg-name="Sangsad TV" tvg-logo="https://i.imgur.com/placeholder.png" group-title="News",Sangsad TV
+https://playztv-apps.pages.dev/sangsad-tv/index.m3u8
+
+#EXTINF:-1 tvg-id="maasrangatv" tvg-name="Maasranga TV" tvg-logo="https://i.imgur.com/placeholder.png" group-title="Bangla Entertainment",Maasranga TV
+https://playztv-apps.pages.dev/maasranga-tv/index.m3u8
+
+#EXTINF:-1 tvg-id="dealtv" tvg-name="Deal TV" tvg-logo="https://i.imgur.com/placeholder.png" group-title="Shopping",Deal TV
+https://playztv-apps.pages.dev/deal-tv/index.m3u8
+
+#EXTINF:-1 tvg-id="btvworld" tvg-name="BTV World" tvg-logo="https://i.imgur.com/placeholder.png" group-title="International",BTV World
+https://playztv-apps.pages.dev/btv-world/index.m3u8
+
+#EXTINF:-1 tvg-id="islamictv" tvg-name="Islamic TV" tvg-logo="https://i.imgur.com/placeholder.png" group-title="Religious",Islamic TV
+https://playztv-apps.pages.dev/islamic-tv/index.m3u8
+
+#EXTINF:-1 tvg-id="channel71" tvg-name="Channel 71" tvg-logo="https://i.imgur.com/placeholder.png" group-title="Bangla Entertainment",Channel 71
+https://playztv-apps.pages.dev/channel-71/index.m3u8
+
+#EXTINF:-1 tvg-id="anandatv" tvg-name="Ananda TV" tvg-logo="https://i.imgur.com/placeholder.png" group-title="Bangla Entertainment",Ananda TV
+https://playztv-apps.pages.dev/ananda-tv/index.m3u8
+
+#EXTINF:-1 tvg-id="bijoytv" tvg-name="Bijoy TV" tvg-logo="https://i.imgur.com/placeholder.png" group-title="Bangla Entertainment",Bijoy TV
+https://playztv-apps.pages.dev/bijoy-tv/index.m3u8
+
+#EXTINF:-1 tvg-id="starjalsha" tvg-name="Star Jalsha" tvg-logo="https://i.imgur.com/placeholder.png" group-title="Indian Entertainment",Star Jalsha
+https://playztv-apps.pages.dev/star-jalsha/index.m3u8
+
+#EXTINF:-1 tvg-id="zeebangla" tvg-name="Zee Bangla" tvg-logo="https://i.imgur.com/placeholder.png" group-title="Indian Entertainment",Zee Bangla
+https://playztv-apps.pages.dev/zee-bangla/index.m3u8
